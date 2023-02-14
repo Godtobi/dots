@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3 style="text-align: center; color: green">
+    <span th:text="'Welcomesslp  to ' + ${to} + '!'"></span>
+</h3>
+
+<h1>BARCODE</h1>
+<h1>
+    <span th:text="${barcode}"></span>
+</h1>
+
+
+
+<img alt="mastercard"  th:src="@{{barCodePath}(barCodePath = ${barcode})}" />
+
+<h1>QRCODE</h1>
+
+<img alt="mastercard"  th:src="@{{qrCodePath}(qrCodePath = ${qrcode})}" />
+
+
+</body>
+</html>
